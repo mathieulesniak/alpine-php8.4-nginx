@@ -3,7 +3,7 @@ echo "[i] Starting PHP+Nginx.."
 
 # start php-fpm
 mkdir -p /usr/logs/php-fpm
-php-fpm8
+php-fpm84
 
 # start nginx
 mkdir -p /usr/logs/nginx

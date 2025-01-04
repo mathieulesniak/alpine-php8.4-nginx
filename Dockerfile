@@ -61,10 +61,12 @@ RUN cd /tmp/ && \
 
 ADD php-fpm.conf /etc/php84/
 ADD nginx-site.conf /etc/nginx/nginx.conf
+RUN mv /etc/nginx/conf.d/stream.conf /etc/nginx/
 
 ADD entrypoint.sh /etc/entrypoint.sh
 ADD ownership.sh /
 RUN mkdir -p /var/www/public
+RUN mkdir /tmp/nginx
 COPY --chown=nobody src/ /var/www/public/
 
 
